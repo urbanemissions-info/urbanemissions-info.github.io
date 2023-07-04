@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meterological forecasts</title>
+  <link rel="icon" href="ue.jpeg" type="image/jpeg">
+
+  <style>
+    .spacing{margin: 20px;text-transform: capitalize;} 
+  </style>
+</head>
+
+<body>
+    <h1 class="spacing" id="selectedHeading" class="capitalize"> Air Quality Forecasts : Ahmedabad </h1>
+    <div class="spacing">
+        <label for="citySelect">Select a city:</label>
+        <select id="citySelect" onchange="updateHeading()"></select>
+    </div>
+    
+    <div class="spacing">
+        <label for="parameterSelect">Select a meterological parameter:</label>
+        <select id="parameterSelect" onchange="updateHeading()">
+            <option value="precip" selected>Precipitation</option>
+            <option value="temp2m">Temperature</option>
+            <option value="winds">Winds</option>
+            <option value="pblht">Mixing Height</option>
+        </select>
+    </div>  
+    <hr>
+    
+    <h2  class="spacing"> Daily maps </h2>
+        <img id="daily" src="https://urbanemissions.info/forecasts/ahmedabad/stitched_precip_daysum_1by4.png">
+    <hr>    
+    
+    <h2  class="spacing"> Time series (variation within Airshed) </h2>
+        <img id="timeseries" src="https://urbanemissions.info/forecasts/ahmedabad/timeseries_precip.png">
+    <hr>
+    
+    <h2  class="spacing"> Hourly animation </h2>
+        <video class = "spacing" id="animation" width="50%" autoplay controls loop>
+            <source id="hourly" src="https://urbanemissions.info/forecasts/ahmedabad/animation_precip.mp4" type="video/mp4" alt="">
+        </video>
+
+    <script src="selectcity.js"></script>
+</body>
+</html>
+
