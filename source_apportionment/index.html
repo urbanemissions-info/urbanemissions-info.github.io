@@ -8,14 +8,18 @@
 
 <body>
     <h1 class="spacing" id="selectedHeading" class="capitalize"> Source apportionment : Agartala </h1>
+    
     <div class="spacing">
         <label for="citySelect">Select a city:</label>
         <select id="citySelect" onchange="updateHeading()"></select>
+        <a id="apna_href" href="https://urbanemissions.info/wp-content/uploads/apna/docs/india_apna_2019_agartala.pdf" target="_blank">
+          <p> Download APnA Leaflet </p>
+        </a>
     </div>
     <hr>
     
     
-    <object id="source_apportionment" data="plots/Agartala_source_apportionment_pie.svg" type="image/svg+xml" height="800" width="100%" alt="Not available"></object>
+    <object id="source_apportionment" data="plots/Agartala_source_apportionment_pie.svg" type="image/svg+xml" height="750" width="100%" alt="Not available"></object>
     
     <script src="selectcity.js"></script>
 </body>

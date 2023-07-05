@@ -1,3 +1,16 @@
+
+function convertToLowercase(str) {
+  return str.toLowerCase();
+}
+
+function checkValueInList(value, list) {
+  if (list.includes(value)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // Function to parse CSV data
 function parseCSV(csvData) {
     var selectBox = document.getElementById("citySelect");
@@ -54,8 +67,24 @@ function updateHeading() {
   var headingElement = document.getElementById("selectedHeading");
   headingElement.textContent = "Source apportionment : "+city_selected;
   
+  var apna_href_Element = document.getElementById("apna_href");
+  
+  var list_2017 = ["Agra", "Amritsar", "Bengaluru", "Bhopal", "Bhubaneshwar", "Chandigarh", "Chennai", "Coimbatore", "Dehradun", "Indore",
+                  "Jaipur", "Kanpur", "Kochi", "Ludhiana", "Nagpur", "Patna", "Pune", "Raipur", "Ranchi", "Varanasi"]
+  
+  var isValueInList = checkValueInList(city_selected, list_2017);
+  
+  if (isValueInList) {
+    apna_href_Element.href = "https://urbanemissions.info/wp-content/uploads/apna/docs/india_apna_"+'2017'+"_"+convertToLowercase(city_selected)+".pdf";
+  } else{
+    apna_href_Element.href = "https://urbanemissions.info/wp-content/uploads/apna/docs/india_apna_"+'2019'+"_"+convertToLowercase(city_selected)+".pdf";
+  }
+
+  
+  
   var source_apportionment_Element = document.getElementById("source_apportionment");
   source_apportionment_Element.data = "plots/"+city_selected+"_source_apportionment_pie.svg";
+
   
 }
 
