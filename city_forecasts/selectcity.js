@@ -61,24 +61,46 @@ function updateHeading() {
   var dailyElement = document.getElementById("daily");
   var timeseriesElement = document.getElementById("timeseries");
   var hourlyElement = document.getElementById("hourly");
+
+  var dailyhrefElement = document.getElementById("daily_href");
+  var timeserieshrefElement = document.getElementById("timeseries_href");
+  var hourlyhrefElement = document.getElementById("hourly_href");
   
   if (parameter_selected=='precip'){
     dailyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_precip_daysum_1by4.png";
     timeseriesElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_precip.png";
     hourlyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_precip.mp4";
+
+    dailyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_precip_daysum_1by4.png";
+    timeserieshrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_precip.png";
+    hourlyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_precip.mp4";
+    
   } else if (parameter_selected=='temp2m'){
     dailyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_temp2m_dayngt_2by4.png";
     timeseriesElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_temp2m.png";
     hourlyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_temp.mp4";
+
+    dailyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_temp2m_dayngt_2by4.png";
+    timeserieshrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_temp2m.png";
+    hourlyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_temp.mp4";
+
   } else if (parameter_selected =='winds'){
     dailyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_winds_dayngt_2by4.png";
     timeseriesElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_winds.png";
     hourlyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_winds.mp4";
+
+    dailyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/stitched_winds_dayngt_2by4.png";
+    timeserieshrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_winds.png";
+    hourlyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_winds.mp4";
   } else {
     dailyElement.src = "";
     dailyElement.alt = "Not available";
     timeseriesElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_pblht.png";
     hourlyElement.src = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_pblht.mp4";
+
+    dailyhrefElement.href = "";
+    timeserieshrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/timeseries_pblht.png";
+    hourlyhrefElement.href = "https://urbanemissions.info/forecasts/"+city_selected+"/animation_pblht.mp4";
   }
 
   // Reload the video to reflect the new source

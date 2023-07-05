@@ -3,10 +3,7 @@
 <head>
   <title>Meterological forecasts</title>
   <link rel="icon" href="ue.jpeg" type="image/jpeg">
-
-  <style>
-    .spacing{margin: 20px;text-transform: capitalize;} 
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -28,17 +25,23 @@
     <hr>
     
     <h2  class="spacing"> Daily maps </h2>
-        <img id="daily" src="https://urbanemissions.info/forecasts/ahmedabad/stitched_precip_daysum_1by4.png">
+    <a id="daily_href" href="https://urbanemissions.info/forecasts/ahmedabad/stitched_precip_daysum_1by4.png" target="_blank">
+        <img id="daily" src="https://urbanemissions.info/forecasts/ahmedabad/stitched_precip_daysum_1by4.png" class="image-container">
+    </a>
     <hr>    
     
     <h2  class="spacing"> Time series (variation within Airshed) </h2>
-        <img id="timeseries" src="https://urbanemissions.info/forecasts/ahmedabad/timeseries_precip.png">
+    <a id="timeseries_href" href="https://urbanemissions.info/forecasts/ahmedabad/timeseries_precip.png" target="_blank">
+        <img id="timeseries" src="https://urbanemissions.info/forecasts/ahmedabad/timeseries_precip.png" class="image-container">
+    </a>
     <hr>
     
     <h2  class="spacing"> Hourly animation </h2>
-        <video class = "spacing" id="animation" width="50%" autoplay controls loop>
+    <a id="hourly_href" href="https://urbanemissions.info/forecasts/ahmedabad/animation_precip.mp4" target="_blank">
+        <video autoplay controls loop class="image-container">
             <source id="hourly" src="https://urbanemissions.info/forecasts/ahmedabad/animation_precip.mp4" type="video/mp4" alt="">
         </video>
+    </a>
 
     <script src="selectcity.js"></script>
 </body>
