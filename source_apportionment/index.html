@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Source apportionment</title>
+  <link rel="icon" href="ue.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="spacing" id="selectedHeading" class="capitalize"> Source apportionment : Agartala </h1>
+    <div class="spacing">
+        <label for="citySelect">Select a city:</label>
+        <select id="citySelect" onchange="updateHeading()"></select>
+    </div>
+    <hr>
+    
+    
+    <object id="source_apportionment" data="plots/Agartala_source_apportionment_pie.svg" type="image/svg+xml" height="800" width="100%" alt="Not available"></object>
+    
+    <script src="selectcity.js"></script>
+</body>
+</html>
+
