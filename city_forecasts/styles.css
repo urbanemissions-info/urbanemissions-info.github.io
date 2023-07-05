@@ -1,7 +1,20 @@
+h1, h2 {
+  font-family: 'Open Sans';
+}
+
+p, label, select, select option {
+  font-family: 'Open Sans';
+  font-size: 16px;
+}
+
+hr {
+  color: #009b00;
+}
+
 .spacing {
     margin: 20px;
     text-transform: capitalize;
-} 
+}
 
 .image-container {
     max-width: 100%;
