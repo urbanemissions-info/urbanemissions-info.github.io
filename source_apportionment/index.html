@@ -12,16 +12,13 @@
     <div class="spacing">
         <label for="citySelect">Select a city:</label>
         <select id="citySelect" onchange="updateHeading()"></select>
-        <a id="apna_href" href="https://urbanemissions.info/wp-content/uploads/apna/docs/india_apna_2019_agartala.pdf" target="_blank">
-          <p> Download APnA Leaflet </p>
-        </a>
-    </div>
-    <hr>
+        
+    </div>    
     
-    
-    <object id="source_apportionment" data="plots/Agartala_source_apportionment_pie.svg" type="image/svg+xml" height="750" width="100%" alt="Not available"></object>
-    
+    <iframe id="source_apportionment" src="plots/Agartala_source_apportionment_pie.svg"></iframe>
+    <a id="apna_href" href="https://urbanemissions.info/wp-content/uploads/apna/docs/india_apna_2019_agartala.pdf" target="_blank">
+      <p> Download APnA Leaflet </p>
+    </a>
     <script src="selectcity.js"></script>
 </body>
 </html>
-

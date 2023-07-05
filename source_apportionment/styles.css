@@ -1,3 +1,8 @@
+html,
+body {
+  height:100%;
+}
+
 h1, h2 {
   font-family: 'Open Sans';
 }
@@ -14,4 +19,9 @@ hr {
 .spacing {
     margin: 20px;
     text-transform: capitalize;
+}
+
+#source_apportionment {
+  width: 100%; /* Set initial width to 100% */
+  height: 70%;
 }

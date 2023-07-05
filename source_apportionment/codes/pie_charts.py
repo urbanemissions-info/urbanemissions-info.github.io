@@ -23,7 +23,7 @@ for city in data.City.unique():
     city_data = data[data.City==city]
     city_data = city_data.replace({'variable':sources_dict})
     study_year = city_data.study_year.unique()[0]
-    pie_chart = pygal.Pie(truncate_legend=100, legend_at_bottom=True, legend_at_bottom_columns=3)
+    pie_chart = pygal.Pie(truncate_legend=100)
     pie_chart.title = "Source Apportionment {} - {}".format(city, study_year)
     for idx, row in city_data.iterrows():
         label = row['variable']

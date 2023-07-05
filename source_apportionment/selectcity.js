@@ -1,4 +1,3 @@
-
 function convertToLowercase(str) {
   return str.toLowerCase();
 }
@@ -83,7 +82,7 @@ function updateHeading() {
   
   
   var source_apportionment_Element = document.getElementById("source_apportionment");
-  source_apportionment_Element.data = "plots/"+city_selected+"_source_apportionment_pie.svg";
+  source_apportionment_Element.src = "plots/"+city_selected+"_source_apportionment_pie.svg";
 
   
 }
@@ -94,3 +93,14 @@ const capitalizeFirstLetter = (inputString = "") => {
     }
     return inputString.replace(/_/g, " ").replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
   };
+
+  window.addEventListener('resize', resizeIframe);
+
+  function resizeIframe() {
+    var iframe = document.getElementById('dynamic-iframe');
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    iframe.style.height = windowHeight + 'px';
+  }
+  
+  // Initial call to resizeIframe() to set the initial height
+  resizeIframe();
