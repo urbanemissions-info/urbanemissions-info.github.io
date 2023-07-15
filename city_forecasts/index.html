@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <h1 class="spacing" id="selectedHeading" class="capitalize"> Air Quality Forecasts : Ahmedabad </h1>
+<body onload="getUserLocation()">
+    <h1 class="spacing" id="selectedHeading" class="capitalize"> Air Quality Forecasts: Ahmedabad </h1>
     <div class="spacing">
         <label for="citySelect">Select a city:</label>
         <select id="citySelect" onchange="updateHeading()"></select>
