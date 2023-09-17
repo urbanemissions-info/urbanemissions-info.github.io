@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Responsive Page</title>
+    <style>
+        /* Add your CSS styles here */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Optionally remove the iframe border */
+        }
+
+        .legend_label{
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+
+        /* Media query for screens smaller than 768px (typical mobile devices) */
+        @media screen and (max-width: 768px) {
+            header {
+                font-size: 18px;
+            }
+
+            .content {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Day(24-h) average for Sept 14, 2023</h2>
+    </header>
+    <div class="container">
+            <!-- Embed another HTML document using an iframe -->
+        <iframe src="choropleth_allIndia.html" frameborder="0"></iframe>
+        
+        <div style="width:80%; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; border: 2px solid gray; z-index: 1000; padding: 5px;">
+            <p><strong>PM2.5 (μg/m3)</strong></p>
+            <div style="display: flex;flex-wrap: wrap; justify-content: flex-start; align-items: center;">
+                
+                <div class="legend_label">
+                    <span style="background-color: #006837; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">0-20</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #1a9850; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">20-40</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #66bd63; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">40-60</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #fdff00; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">60-90</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #ffe833; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0;">90-120</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #ffc566; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">120-150</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #ff9933; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">150-200</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #f46d43; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">200-250</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #d73027; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">250-300</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #a50026; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">300-400</p>
+                </div>
+                <div class="legend_label">
+                    <span style="background-color: #660000; width: 20px; height: 20px; margin-right: 5px;"></span>
+                    <p style="margin: 0">400+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
